@@ -11,4 +11,3 @@
   -unless @page.parent.nil?
     =@page.new_record? ? "Upon saving, page will be located under" : "Located under"
     =link_to @page.parent.title, edit_admin_page_path(@page.parent)
-    page

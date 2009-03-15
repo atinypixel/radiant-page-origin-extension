@@ -2,7 +2,7 @@
 # require_dependency 'application'
 
 class PageOriginExtension < Radiant::Extension
-  version "0.1"
+  version "1.0"
   description "When you go to create or edit a page, you will now see the parent page title right under the page title text field."
   url "http://github.com/atinypixel/radiant-page-origin-extension/"
   
