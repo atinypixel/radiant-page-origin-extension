@@ -18,6 +18,7 @@ html body #main #content h1#page_path #path_slug {
   float: left;
   height: 15px;
   margin-top: -1px;
+  margin-left: 2px;
   padding: 0px 1px;
   background-color: #d6cfb1;
   color: #4a4325;
