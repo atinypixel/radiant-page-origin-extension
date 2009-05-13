@@ -13,6 +13,7 @@ class PageOriginExtension < Radiant::Extension
   # end
   
   def activate
+    Admin::PagesController.send :include, Admin::PageOriginController
     admin.pages.edit.add :form, "parent_page_title", :after => "edit_title"
   end
   
