@@ -29,7 +29,7 @@
 
 %h1#page_path
   %span#root_path
-    ="http://#{request.subdomain.first if request.subdomain}#{request.domain}#{parent_archive_page ? @page.url : @page.parent.url}"
+    ="http://#{request.subdomain if request.subdomain}#{request.domain}#{parent_archive_page ? @page.url : @page.parent.url}"
   %span#path_slug<>
     =@page.new_record? ? "..." : @page.slug
     / -unless !@page.parent.nil?
