@@ -23,6 +23,7 @@ module Admin
         end
         
         def include_page_origin_assets
+          include_stylesheet('admin/page_origin')
           include_javascript('admin/page_origin')
         end
       end

@@ -2,16 +2,10 @@
 # require_dependency 'application'
 
 class PageOriginExtension < Radiant::Extension
-  version "1.0"
+  version "1.1"
   description "When you go to create or edit a page, you will now see the parent page title right under the page title text field."
   url "http://github.com/atinypixel/radiant-page-origin-extension/"
-  
-  # define_routes do |map|
-  #   map.namespace :admin, :member => { :remove => :get } do |admin|
-  #     admin.resources :edit_create_location
-  #   end
-  # end
-  
+    
   def activate
     Admin::PagesController.send :include, Admin::PageOriginController
     admin.pages.edit.add :form, "parent_page_title", :after => "edit_title"

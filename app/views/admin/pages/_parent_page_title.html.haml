@@ -1,35 +1,5 @@
--content_for 'page_css' do
-  :sass
-    html body #main #content h1#page_path
-      :float left
-      :clear left
-      :width 100%
-      :margin-top 5px
-      :font-size 12px
-      :color = #969286 -60
-      #label
-        :float left
-        :margin-right 3px
-        :color = #969286 -60
-      #root_path
-        :float left
-      #path_slug
-        :float left
-        :height 15px
-        :margin-top -1px
-        :padding 0px 1px
-        :background-color = #EAE3C5 -20
-        :color = #EAE3C5 -160
-        :border = 1px solid (#EAE3C5 -40)
-      a
-        :color #625F57
-        
-
 %h1#page_path
   %span#root_path
     =full_base_url(request, @page)
   %span#path_slug<>
     =@page.new_record? ? "..." : @page.slug
-    / -unless !@page.parent.nil?
-    /   =@page.new_record? ? "Upon saving, page will be located under" : "Located under"
-    /   =link_to @page.parent.title, edit_admin_page_path(@page.parent)
