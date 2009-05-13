@@ -17,7 +17,7 @@
         :float left
         :height 15px
         :margin-top -1px
-        :padding 0px 3px
+        :padding 0px 1px
         :background-color = #EAE3C5 -20
         :color = #EAE3C5 -160
         :border = 1px solid (#EAE3C5 -40)
@@ -25,11 +25,9 @@
         :color #625F57
         
 
--parent_archive_page = @page.parent.class_name == "ArchivePage"
-
 %h1#page_path
   %span#root_path
-    ="http://#{request.subdomains.first + '.' if request.subdomains && !request.subdomains.first.nil?}#{request.domain}#{parent_archive_page ? @page.url : @page.parent.url}"
+    =full_base_url(request, @page)
   %span#path_slug<>
     =@page.new_record? ? "..." : @page.slug
     / -unless !@page.parent.nil?
