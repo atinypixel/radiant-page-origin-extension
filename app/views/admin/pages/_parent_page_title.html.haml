@@ -1,2 +1,2 @@
 %h1#page_path
-  =%{<span id="root_path">#{full_base_url(request, @page)}</span><span id="path_slug">#{@page.new_record? ? "..." : @path.slug}}
+  =%{<span id="root_path">#{full_base_url(request, @page)}</span><span id="path_slug">#{@page.new_record? ? "..." : @page.slug}}
